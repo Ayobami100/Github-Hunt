@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+    body.theme2{
+        background-color: black;
+        color: white;
+        
+    }
+    .container{
+        text-align: center;
+    }
+    img {
+       margin: 5px;
+       width: 20px;
+    }
+    #avatar{
+        width: 150px;;
+    }
+     ul{      
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       list-style-type: none;
+    }
+   
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<!-- 
+        <button id="btn1">click</button>
+        <button id="btn2">click2</button>
+        <button id="theme">Toggle Theme</button> 
+          <div>
+        <h1>Ajax Examples!</h1>
+    </div>
+    
+    
+    -->
+    <button id="theme">Toggle Theme</button>
+        <h1>Github Profile Hunt</h1>
+        <h3 id="loader">Loading...</h3>
+        <div><img id="avatar" src=""></div>
+        <div id="name"></div>
+        <div id="username"></div>
+        <div id="location"></div>
+        <div id="bio"></div>
+        <div>
+            <div id="count"></div>
+            <ul id="list"></ul>
+        </div>
+       <div>
+           <input type="text" placeholder="Github username"/>
+           <button >Get Github Profile</button>
+       </div>
+
+    </div>
+  
+    <script>
+        // document.getElementById('btn1').addEventListener('click',function(){
+        // console.log('You just clicked a button!!!');
+        // });
+       
+        // document.getElementById('btn2').addEventListener('mouseover',function(){
+        // document.getElementById('btn2').innerText = "Changed";
+        // });
+        document.getElementById('theme').addEventListener('click',function(){
+        document.body.classList.toggle('theme2');
+        });
+
+    </script>
+    <script src="ajax.js"></script>
+</body>
+
+</html>

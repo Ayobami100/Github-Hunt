@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <script src="./vue.min.js"></script>
+  </head>
+  <div id="tim">
+    <p>{{ FirstName }}</p>
+    <p>{{ LastName }}</p>
+    <p>{{ name }}</p>
+
+    <p>Using mustaches: {{ FirstName }}</p>
+    <p>Using v-html directive: <span v-html="FirstName"></span></p>
+
+    <input v-model="FirstName"><br>
+    <input v-model="LastName"/>
+
+<!-- COmputed Properties -->
+    <div id="example">
+        <p>Original message: "{{ message }}"</p>
+        <p>Computed reversed message: "{{ reversedMessage() }}"</p>
+      </div>
+      <ul id="v-for-object" class="demo">
+          
+        <li v-for="(value,name,index) in object">
+           {{ index }}--{{ name }}, {{ value }}
+          </li>
+      </ul>
+  <script>
+  // var vm = new Vue({
+  //   el:"#tim",
+
+  //   data:{
+  //     FirstName:'Quadri',
+  //     LastName:'Jamiu',
+  //     Age:45
+  //   },
+  //   computed:{
+  //     name:function(){
+  //       return "I am "+this.FirstName+" "+this.LastName;
+  //     }
+  //   }
+  // });
+
+
+    // Computed properties
+//  var app = new Vue({
+//   el:'#example',
+//   data:{
+//     message:'Hello'
+
+//   },
+//   computed:{
+//     reversedMessage: function() {
+//       return this.message.split('').reverse().join('');
+//     }
+//   }
+
+//  });
+new Vue({
+  el: '#v-for-object',
+  data: {
+    object: {
+      title: 'How to do lists in Vue',
+      author: 'Jane Doe',
+      publishedAt: '2016-04-10'
+    }
+  }
+});
+
+
+ 
+  </script>
+</body>
+</html> 
